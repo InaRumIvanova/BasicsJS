@@ -1,0 +1,22 @@
+
+function harvest(arg1,arg2,arg3,arg4){
+    var vineyardMeters=parseInt(arg1);
+    var grapesForMeter=parseFloat(arg2);
+    var litersWineForSale=parseInt(arg3);
+    var numberWorkers=parseInt(arg4);
+
+    var totalKgGrapes=vineyardMeters*grapesForMeter;
+    var percentForSale=totalKgGrapes*0.40;
+    var totalLitersForSale=percentForSale/2.5;
+    var wineLeft=totalLitersForSale-litersWineForSale;
+    var shareWine=wineLeft/numberWorkers;
+
+    if(totalLitersForSale>litersWineForSale){
+        console.log(`Good harvest this year!Total wine: ${totalLitersForSale} liters.${wineLeft} liters left. ${shareWine} per person.`);
+    }else{
+        console.log(`It will be a tough winter! More ${(litersWineForSale-totalLitersForSale)} liters for wine needed.`);
+        console.log(`${Math.ceil()} liters left -> ${Math.ceil(wineWorker)} liters per person.`);
+
+    }
+}
+harvest('1020','1.5','425','4');
